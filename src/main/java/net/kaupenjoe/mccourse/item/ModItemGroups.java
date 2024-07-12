@@ -52,6 +52,8 @@ public class ModItemGroups {
                         entries.add(ModBlocks.FLUORITE_DOOR);
                         entries.add(ModBlocks.FLUORITE_TRAPDOOR);
 
+                        entries.add(ModBlocks.DAHLIA);
+
                     }).build());
 
     public static void registerItemGroups() {

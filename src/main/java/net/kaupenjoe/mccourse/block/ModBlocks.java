@@ -4,6 +4,7 @@ import net.kaupenjoe.mccourse.MCCourseMod;
 import net.kaupenjoe.mccourse.block.custom.MagicBlock;
 import net.kaupenjoe.mccourse.block.custom.StrawberryCropBlock;
 import net.minecraft.block.*;
+import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
@@ -60,6 +61,10 @@ public class ModBlocks {
     public static final Block STRAWBERRY_CROP = registerBlockWithoutBlockItem("strawberry_crop",
             new StrawberryCropBlock(AbstractBlock.Settings.copy(Blocks.WHEAT)));
 
+    public static final Block DAHLIA = registerBlock("dahlia",
+            new FlowerBlock(StatusEffects.INVISIBILITY, 4, AbstractBlock.Settings.copy(Blocks.ALLIUM)));
+    public static final Block POTTED_DAHLIA = registerBlockWithoutBlockItem("potted_dahlia",
+            new FlowerPotBlock(DAHLIA, AbstractBlock.Settings.copy(Blocks.POTTED_ALLIUM)));
 
 
     private static Block registerBlockWithoutBlockItem(String name, Block block) {
